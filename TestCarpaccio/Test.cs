@@ -7,16 +7,12 @@ using NUnit.Framework;
 
 namespace TestCarpaccio
 {
-    class Program
+    [TestFixture]
+    class Test
     {
-        [Test]
-        static void Main(string[] args)
+        public void FirstTestBillisNumber()
         {
-            
-        }
-        public int TestBIllFirst()
-        {
-           
+      
         }
     }
 }

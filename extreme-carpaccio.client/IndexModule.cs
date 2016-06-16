@@ -27,13 +27,7 @@ namespace xCarpaccio.client
                     //TODO: do something with order and return a bill if possible
                     // If you manage to get the result, return a Bill object (JSON serialization is done automagically)
                     // Else return a HTTP 404 error : return Negotiate.WithStatusCode(HttpStatusCode.NotFound);
-                    int cpt = 0;
-                    foreach (decimal od in order.Prices)
-                    {
-                        bill.total += od*order.Quantities[cpt];
-                        cpt++;
-                    }
-                    cpt = 0;
+                    bill = CalculBill(order, bill);
                 }
                 catch (Exception e)
                 {
@@ -50,6 +44,18 @@ namespace xCarpaccio.client
                 Console.WriteLine(feedback.Content);
                 return Negotiate.WithStatusCode(HttpStatusCode.OK);
             };
+        }
+
+        public Bill CalculBill(Order order, Bill bill)
+        {
+            int cpt = 0;
+            foreach (decimal od in order.Prices)
+            {
+                bill.total += od * order.Quantities[cpt];
+                cpt++;
+            }
+            cpt = 0;
+            return bill;
         }
     }
 }
