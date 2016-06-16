@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace xCarpaccio.client
@@ -34,7 +36,7 @@ namespace xCarpaccio.client
                     return Negotiate.WithStatusCode(HttpStatusCode.NotFound);
                 }
 
-                return bill;
+                return Negotiate.WithStatusCode(HttpStatusCode.NotFound); 
             };
 
             Post["/feedback"] = _ =>
@@ -48,14 +50,42 @@ namespace xCarpaccio.client
 
         public Bill CalculBill(Order order, Bill bill)
         {
+            CountriesTaxes countriesTaxes = new CountriesTaxes();
             int cpt = 0;
-            foreach (decimal od in order.Prices)
+            foreach (decimal price in order.Prices)
             {
-                bill.total += od * order.Quantities[cpt];
+                bill.total += price * order.Quantities[cpt];
                 cpt++;
+                decimal taxe = countriesTaxes.Taxes[order.Country];
+                bill.total = bill.total * taxe;
+                bill.total = getReduc(bill.total);
             }
-            cpt = 0;
             return bill;
+        }
+
+        public decimal getReduc(decimal total)
+        {
+            if (total >= 1000)
+            {
+                total = total * (decimal)0.97;
+            }
+            else if (total >= 5000)
+            {
+                total = total * (decimal)0.95;
+            }
+            else if (total >= 7000)
+            {
+                total = total * (decimal)0.93;
+            }
+            else if (total >= 10000)
+            {
+                total = total * (decimal)0.90;
+            }
+            else if (total >= 50000)
+            {
+                total = total * (decimal)0.85;
+            }
+            return total;
         }
     }
 }

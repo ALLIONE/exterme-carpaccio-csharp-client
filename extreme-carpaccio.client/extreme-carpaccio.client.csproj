@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="CountriesTaxes.cs" />
     <Compile Include="Feedback.cs" />
     <Compile Include="IndexModule.cs" />
     <Compile Include="Bill.cs" />

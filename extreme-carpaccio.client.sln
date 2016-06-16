@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCarpaccio", "TestCarpaccio\TestCarpaccio.csproj", "{570FD5CE-85E4-420E-948E-ACA0BCF8C071}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Carpaccio", "Test_Carpaccio\Test_Carpaccio.csproj", "{B8BC4C46-5523-4957-A2C8-415311B3CB4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{35460AA4-B94A-4B64-9418-7243EC3D2F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35460AA4-B94A-4B64-9418-7243EC3D2F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35460AA4-B94A-4B64-9418-7243EC3D2F01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{570FD5CE-85E4-420E-948E-ACA0BCF8C071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{570FD5CE-85E4-420E-948E-ACA0BCF8C071}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{570FD5CE-85E4-420E-948E-ACA0BCF8C071}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{570FD5CE-85E4-420E-948E-ACA0BCF8C071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8BC4C46-5523-4957-A2C8-415311B3CB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8BC4C46-5523-4957-A2C8-415311B3CB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8BC4C46-5523-4957-A2C8-415311B3CB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8BC4C46-5523-4957-A2C8-415311B3CB4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

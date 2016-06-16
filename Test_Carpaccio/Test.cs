@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using xCarpaccio.client;
 
-namespace TestCarpaccio
+namespace Test_Carpaccio
 {
     [TestFixture]
     class Test
     {
-        public void FirstTestBillisNumber()
-        {
-             //Assert.IsNotNull();
-        }
+
     }
 }
